@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Application</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef0ff;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5544aa;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #5544aa;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #5544aa;
+            color: white;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .delete {
+            background: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Student Records Management</h2>
+
+    <h3>Add New Record</h3>
+
+    <form method="POST">
+        <input type="text" name="name"
+               placeholder="Enter Name" required>
+
+        <input type="email" name="email"
+               placeholder="Enter Email" required>
+
+        <button type="submit">Add Record</button>
+    </form>
+
+    <h3>Existing Records</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>
+                <a href="/edit/{{ record[0] }}">Edit</a>
+
+                <form method="POST"
+                      action="/delete/{{ record[0] }}"
+                      style="display:inline;">
+                    <button class="delete" type="submit">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+</body>
+</html>

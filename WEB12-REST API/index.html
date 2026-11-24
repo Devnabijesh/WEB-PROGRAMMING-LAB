@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DAILY NEWS</h1>
+        <p>Your daily dose of latest updates</p>
+    </header>
+
+    <nav>
+        <span>Home</span>
+        <span>Latest News</span>
+        <span>Trending</span>
+    </nav>
+
+    <div class="container">
+
+        <h2>Top Stories</h2>
+
+        <div class="search">
+            <input type="text" id="search"
+                   placeholder="Search news headlines...">
+            <button onclick="searchNews()">Search</button>
+            <button onclick="getNews()">Refresh</button>
+        </div>
+
+        <div id="news">
+            <p>Click Refresh to load latest news.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Daily News | Stay Informed</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

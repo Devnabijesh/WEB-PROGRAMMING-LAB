@@ -1,0 +1,272 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff8f5;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background: #8e5364;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 26px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Product Introduction */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #8e5364;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Perfume Bottle Structure */
+.perfume-bottle {
+    width: 40%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottle-cap {
+    width: 65px;
+    height: 45px;
+    background: #c49a6c;
+    border-radius: 8px 8px 3px 3px;
+}
+
+.bottle-neck {
+    width: 45px;
+    height: 25px;
+    background: #e8c9b8;
+    border: 1px solid #c49a6c;
+}
+
+.bottle-body {
+    width: 170px;
+    height: 190px;
+    background: linear-gradient(135deg, #f8dce3, #d99bad);
+    border: 3px solid #c49a6c;
+    border-radius: 25px 25px 35px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.bottle-body h3 {
+    color: #8e5364;
+    letter-spacing: 3px;
+}
+
+.bottle-body p {
+    color: #8e5364;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.bottle-body span {
+    color: #8e5364;
+    font-size: 9px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #a65d75;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #71394e;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 60px 8%;
+    background: #fce9ed;
+}
+
+.features h2 {
+    font-size: 32px;
+    color: #8e5364;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: flex;
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.feature h3 {
+    color: #a65d75;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    line-height: 1.6;
+}
+
+/* Sign Up Section */
+.signup {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff8f5;
+}
+
+.signup h2 {
+    color: #8e5364;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.signup p {
+    margin-bottom: 25px;
+}
+
+.signup form {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.signup input {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.signup button {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #593342;
+    color: white;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .perfume-bottle {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .features h2,
+    .signup h2 {
+        font-size: 26px;
+    }
+
+    .signup form {
+        padding: 20px;
+    }
+}

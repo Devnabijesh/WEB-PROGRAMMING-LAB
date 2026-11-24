@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Record</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5544aa;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Edit Record</h2>
+
+    <form method="POST">
+        <input type="text" name="name"
+               value="{{ record[1] }}" required>
+
+        <input type="email" name="email"
+               value="{{ record[2] }}" required>
+
+        <button type="submit">Update Record</button>
+    </form>
+
+    <a href="/">Back to Home</a>
+
+</div>
+</body>
+</html>

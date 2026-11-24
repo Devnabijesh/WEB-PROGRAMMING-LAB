@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush Essence - Body Perfume</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h2>Blush Essence</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Product Introduction -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>Discover Your Signature Scent</h1>
+
+            <p>
+                Experience the beauty of our premium body perfume.
+                Enjoy a refreshing and long-lasting fragrance
+                that keeps you feeling confident, elegant
+                and beautiful throughout the day.
+            </p>
+
+            <a href="#signup" class="btn">Sign Up Now</a>
+        </div>
+
+        <!-- CSS Perfume Bottle -->
+        <div class="perfume-bottle">
+
+            <div class="bottle-cap"></div>
+
+            <div class="bottle-neck"></div>
+
+            <div class="bottle-body">
+                <h3>BLUSH</h3>
+                <p>ESSENCE</p>
+                <span>BODY PERFUME</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <h2>Why Choose Our Perfume?</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <h3>Long Lasting</h3>
+                <p>
+                    Enjoy a beautiful fragrance that lasts
+                    for hours throughout your day.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Refreshing Fragrance</h3>
+                <p>
+                    A refreshing and pleasant scent
+                    for every occasion.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Elegant Design</h3>
+                <p>
+                    A stylish perfume bottle that adds
+                    beauty to your collection.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section class="signup" id="signup">
+
+        <h2>Create Your Account</h2>
+
+        <p>Sign up with Blush Essence and explore our fragrances!</p>
+
+        <form onsubmit="signup(event)">
+
+            <input type="text"
+                   placeholder="Enter Your Name"
+                   required>
+
+            <input type="email"
+                   placeholder="Enter Your Email"
+                   required>
+
+            <input type="password"
+                   placeholder="Create Password"
+                   minlength="6"
+                   required>
+
+            <button type="submit" class="btn">Sign Up</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Blush Essence. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function signup(event) {
+            event.preventDefault();
+            alert("Thank you for signing up with Blush Essence!");
+        }
+    </script>
+
+</body>
+</html>
+
+

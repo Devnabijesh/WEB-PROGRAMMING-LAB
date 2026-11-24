@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef0ff;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5544aa;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #5544aa;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #5544aa;
+            color: white;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .delete {
+            background: #dc3545;
+        }
+
+        .search {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Employee Management System</h2>
+
+    <h3>Add Employee</h3>
+
+    <form method="POST">
+        <input type="text" name="name"
+               placeholder="Employee Name" required>
+
+        <input type="email" name="email"
+               placeholder="Email" required>
+
+        <input type="text" name="department"
+               placeholder="Department" required>
+
+        <input type="number" name="salary"
+               placeholder="Salary" min="0" step="0.01" required>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h3 class="search">Search Employee</h3>
+
+    <form method="GET">
+        <input type="text" name="search"
+               placeholder="Search by Name or Employee ID"
+               value="{{ search }}">
+        <button type="submit">Search</button>
+        <a href="/">Show All</a>
+    </form>
+
+    <h3>Employee Records</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp[0] }}</td>
+            <td>{{ emp[1] }}</td>
+            <td>{{ emp[2] }}</td>
+            <td>{{ emp[3] }}</td>
+            <td>{{ emp[4] }}</td>
+            <td>
+                <a href="/edit/{{ emp[0] }}">Edit</a>
+
+                <form method="POST"
+                      action="/delete/{{ emp[0] }}"
+                      style="display:inline;">
+                    <button class="delete" type="submit">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Product Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ShopSmart</h1>
+        <p>Find your favourite products instantly</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Discover Products</h2>
+        <p class="subtitle">Search and explore our collection</p>
+
+        <div class="search-box">
+            <input type="text" id="search"
+                   placeholder="Search products..."
+                   oninput="searchProducts()">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <p id="count"></p>
+
+        <div id="results" class="products"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 ShopSmart | Find What You Love</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
